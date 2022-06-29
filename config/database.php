@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mongodb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -92,6 +92,13 @@ return [
             // 'encrypt' => env('DB_ENCRYPT', 'yes'),
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
+
+        'connections' => [
+            'mongodb' => [
+                  'driver' => 'mongodb',
+                  'dsn' => env('DB_URI', 'mongodb+srv://lfa-22:lfa-22@cluster1.83sy4fu.mongodb.net/?retryWrites=true&w=majority'),
+                  'database' => 'LFA',
+          ],
 
     ],
 
