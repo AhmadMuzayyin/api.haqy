@@ -15,7 +15,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mongodb'),
+    // 'default' => env('DB_CONNECTION', 'mongodb'),
+    'default' => 'mongodb',
 
     /*
     |--------------------------------------------------------------------------
@@ -92,13 +93,11 @@ return [
             // 'encrypt' => env('DB_ENCRYPT', 'yes'),
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
-
-        'connections' => [
-            'mongodb' => [
-                  'driver' => 'mongodb',
-                  'dsn' => env('DB_URI', 'mongodb+srv://lfa-22:lfa-22@cluster1.83sy4fu.mongodb.net/?retryWrites=true&w=majority'),
-                  'database' => 'LFA',
-          ],
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn' => env('DB_URI', 'mongodb+srv://lfa-22:lfa-22@cluster1.83sy4fu.mongodb.net/?retryWrites=true&w=majority'),
+            'database' => 'LFA',
+        ],
 
     ],
 
@@ -132,7 +131,7 @@ return [
 
         'options' => [
             'cluster' => env('REDIS_CLUSTER', 'redis'),
-            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
+            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_') . '_database_'),
         ],
 
         'default' => [

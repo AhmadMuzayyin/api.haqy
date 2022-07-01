@@ -54,7 +54,8 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://api-haqy.herokuapp.com/'),
+    // 'url' => env('APP_URL', 'https://api-haqy.herokuapp.com/'),
+    'url' => env('APP_URL', 'http://localhost'),
 
     'asset_url' => env('ASSET_URL'),
 
