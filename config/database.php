@@ -15,8 +15,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mongodb'),
-    // 'default' => 'mongodb',
+    // 'default' => env('DB_CONNECTION', 'mongodb'),
+    'default' => 'mongodb',
 
     /*
     |--------------------------------------------------------------------------
@@ -95,7 +95,7 @@ return [
         ],
         'mongodb' => [
             'driver' => 'mongodb',
-            'dsn' => env('DB_URI', 'mongodb+srv://lfa-22:lfa-22@cluster1.83sy4fu.mongodb.net/?retryWrites=true&w=majority'),
+            'dsn' => env('DB_DSN', 'mongodb+srv://lfa-22:lfa-22@cluster1.83sy4fu.mongodb.net/?retryWrites=true&w=majority'),
             'database' => 'LFA',
         ],
 

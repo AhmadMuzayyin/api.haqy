@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 Route::controller(PostController::class)->group(function () {
     Route::post('post/store', 'store');
-    Route::get('post', 'show');
+    Route::get('post/show/{slug}', 'show');
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

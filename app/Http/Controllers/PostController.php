@@ -18,10 +18,10 @@ class PostController extends Controller
 
         return response()->json($post, 200);
     }
-    public function show()
+    public function show($slug)
     {
         try {
-            $data = Post::all();
+            $data = Post::firstWhere('slug', $slug);
             return response()->json($data, 200);
         } catch (QueryException $th) {
             return response()->json($th->errorInfo);
