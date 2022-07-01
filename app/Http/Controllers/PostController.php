@@ -8,6 +8,15 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    public function index()
+    {
+        try {
+            $data = Post::paginate(10);
+            return response()->json($data, 200);
+        } catch (QueryException $th) {
+            return response()->json($th->errorInfo);
+        }
+    }
     public function store(Request $request)
     {
         $post = new Post();

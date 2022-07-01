@@ -10,6 +10,6 @@ class Post extends Model
 {
     use HasFactory;
     protected $connection = 'mongodb';
-    protected $collection = 'LFA';
+    protected $collection = 'posts';
     protected $guarded = ['id'];
 }

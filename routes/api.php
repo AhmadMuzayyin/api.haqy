@@ -21,6 +21,7 @@ Route::get('/', function () {
     ], 200);
 });
 Route::controller(PostController::class)->group(function () {
+    Route::get('post', 'index');
     Route::post('post/store', 'store');
     Route::get('post/show/{slug}', 'show');
 });
