@@ -15,6 +15,11 @@ use App\Http\Controllers\PostController;
 |
 */
 
+Route::get('/', function () {
+    return response()->json([
+        'message' => 'hello world'
+    ], 200);
+});
 Route::controller(PostController::class)->group(function () {
     Route::post('post/store', 'store');
     Route::get('post', 'show');
