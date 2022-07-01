@@ -15,5 +15,5 @@ use App\Http\Controllers\PostController;
 */
 
 Route::get('/', function () {
-    return redirect('api');
+    return redirect('/api');
 });
